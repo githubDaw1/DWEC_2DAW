@@ -1,7 +1,8 @@
 function init () {
 
-  document.getElementById ("pulsador").addEventListener("click", function () {
+  document.getElementById ("pulsador").addEventListener("click", function (e) {
     cambiarTexto();
+    console.log (e.clientX + ", " + e.clientY);
   });
 }
 
