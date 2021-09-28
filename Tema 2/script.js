@@ -52,13 +52,12 @@ function arrayUni () {
 function arrayBidi () {
 
   // Esto es una array bidimensional
-  let activities = [['Work', 9], ['Eat', 1], ['Commute', 2], ['Play Game', 1], ['Sleep', 7]];
+  let activities = [['Work', 9], ['Eat', 1], ['Commute', 2], ['Play Game', 1], ['Sleep', 7]];
 
   // Lo recorremos con dos bucles "for" anidados
-  for (let i = 0; i < activities.length; i++) {
-
-    for (let j = 0; j < activities[i].length; j++) {
-      console.log('[' + i + ',' + j + '] = ' + activities[i][j]);
+  for (let i = 0; i < activities.length; i++) {
+    for (let j = 0; j < activities[i].length; j++) {
+      console.log('[' + i + ',' + j + '] = ' + activities[i][j]);
     }
   }
 }
