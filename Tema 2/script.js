@@ -1,6 +1,6 @@
 function variables(){
 
-  ejemplo = 3; // Equivale a declararla fuera de la funcion como var
+  let ejemplo = 3; // Equivale a declararla fuera de la funcion como var
 
   if (ejemplo === 3){
     var variable1 = 1;
