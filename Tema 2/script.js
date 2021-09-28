@@ -29,3 +29,23 @@ function coercion() {
   console.log (numero);
   console.log (numero.toString());
 }
+
+function ternario(){
+
+  let altura; // variable no definida. por defecto, vale 0
+
+  if (altura) {
+    console.log("true");
+  } else {
+    console.log("false");
+  }
+}
+
+function arrayUni () {
+
+  let arr = ["1", "10", "100", "1000"];
+
+  for (let i = 0; i < arr.length && arr[i] < 500; i++) {
+    console.log(i);
+  }
+}
