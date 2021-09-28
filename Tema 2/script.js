@@ -1,11 +1,10 @@
 function variables(){
 
   ejemplo = 3; // Equivale a declararla fuera de la funcion como var
-  let variable2;
 
   if (ejemplo === 3){
     var variable1 = 1;
-    variable2 = 2;
+    let variable2 = 2;
   }
 
   console.log(variable1); // variable1 existe en este lugar
@@ -21,6 +20,12 @@ function tipos(){
 
   console.log(typeof incremento === "number")
   nueva_edad = edad + incremento;
-  console.log(nombre + " tras "+ incremento +" años tendrá "+
-  nueva_edad);
+  console.log(nombre + " tras "+ incremento +" años tendrá " + nueva_edad);
+}
+
+function coercion() {
+
+  let numero = 5;
+  console.log (numero);
+  console.log (numero.toString());
 }
