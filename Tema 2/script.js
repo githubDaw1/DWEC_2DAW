@@ -14,12 +14,11 @@ function variables(){
 function tipos(){
 
   let edad = 23;
-  let nueva_edad;
   let incremento = 4;
   const nombre = "Rosa García";
+  let nueva_edad = edad + incremento;
 
   console.log(typeof incremento === "number")
-  nueva_edad = edad + incremento;
   console.log(nombre + " tras "+ incremento +" años tendrá " + nueva_edad);
 }
 
