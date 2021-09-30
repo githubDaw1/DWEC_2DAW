@@ -46,3 +46,14 @@ console.log("El resultado de la expresión: " + (a > b));
 console.log("El resultado de la expresión: " + (a < b));
 console.log("El resultado de la expresión: " + (a >= b));
 console.log("El resultado de la expresión: " + (a <= b));
+
+// Operadores lógicos
+console.log ("El resultado de la expresión: " + (false && false));
+console.log("El resultado de la expresión: " + (false && true));
+console.log("El resultado de la expresión: " + (true && false));
+console.log("El resultado de la expresión: " + (true && true));
+console.log("El resultado de la expresión: " + (false || false));
+console.log("El resultado de la expresión: " +  (false || true));
+console.log("El resultado de la expresión: " + (true || false));
+console.log("El resultado de la expresión: " + (true || true));
+console.log("El resultado de la expresión: " + (!false));
