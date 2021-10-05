@@ -5,7 +5,7 @@ class Punto {
     this.pY = pY;
   }
 
-  static distancia( a , b) {
+  static distancia(a , b) {
 
     const dx = a.pX - b.pX;
     const dy = a.pY - b.pY;
