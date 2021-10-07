@@ -7,7 +7,7 @@ function devolver() {
 }
 
 function multiplicar (param) {
-  return (param * 2)
+  return (param * 2);
 }
 
 function multiplicar(x, y) {
@@ -20,17 +20,18 @@ const persons = [
   {name: "Tom", age: 41},
   {name: "Andrew", age: 55},
   {name: "Mary", age: 18},
-]
+];
 
 let numero = prompt("Introduce un numero: ");
-let cuentaAtras = numero => {
+
+function cuentaAtras (numero) {
 
   if (numero == 0) {
     return '0';
   } else {
     return cuentaAtras(numero - 1) + ", " + numero;
   }
-};
+}
 
 numero = prompt("Introduce un numero: ");
 console.log(cuentaAtras(numero));
