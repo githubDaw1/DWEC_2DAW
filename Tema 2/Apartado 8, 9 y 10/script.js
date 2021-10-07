@@ -49,6 +49,10 @@ function division (numero1, numero2) {
   }
 }
 
+// let patron = new RegExp(/^\d{2}\/\d{2}\/\d{4}$/);
+let patron = /^\d{2}\/\d{2}\/\d{4}$/;
+let fecha =  "09/01/2006";
+
 console.log(devolver());
 console.log(multiplicar(4));
 console.log(multiplicar(2, 3));
@@ -59,3 +63,4 @@ console.log (Punto.distancia(p1, p2));
 const overThirty = persons.filter(person => person.age > 30);
 console.log(overThirty);
 console.log(division(numero1, numero2));
+console.log(patron.test(fecha));
