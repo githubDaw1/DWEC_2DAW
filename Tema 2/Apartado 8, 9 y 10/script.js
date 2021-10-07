@@ -1,9 +1,8 @@
 let p1 = new Punto(5, 5);
 let p2 = new Punto(10, 10);
-let texto;
 
 function devolver() {
-  texto = "Hola";
+  return "Hola";
 }
 
 function multiplicar (param) {
