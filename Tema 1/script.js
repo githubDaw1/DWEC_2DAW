@@ -1,11 +1,13 @@
-function init () {
+function init() {
 
-  document.getElementById ("pulsador").addEventListener("click", function (e) {
-    cambiarTexto();
-    console.log (e.clientX + ", " + e.clientY);
-  });
+  /* let pulsador = document.getElementById('pulsador');
+  pulsador.onclick = function (e) {cambiarTexto();} */
+
+  document.getElementById("pulsador").addEventListener("click",
+    function () {cambiarTexto();}
+  );
 }
 
 function cambiarTexto() {
-  document.getElementById ("texto").innerHTML = "<p style='color:black'><h1>¡Hola mundo!</h1></p>"
+  document.getElementById("texto").innerHTML = "<p style='color:black'><h1>¡Hola mundo!</h1></p>";
 }
