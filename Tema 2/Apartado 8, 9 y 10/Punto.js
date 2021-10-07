@@ -1,6 +1,6 @@
 class Punto {
 
-  constructor( pX , pY ){
+  constructor(pX , pY){
     this.pX = pX;
     this.pY = pY;
   }
@@ -10,7 +10,7 @@ class Punto {
     const dx = a.pX - b.pX;
     const dy = a.pY - b.pY;
 
-    return Math.sqrt(dx * dx + dy * dy );
+    return Math.sqrt((dx * dx) + (dy * dy));
   }
 
   get coordX() {
