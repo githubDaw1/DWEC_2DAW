@@ -36,6 +36,20 @@ function cuentaAtras (numero) {
 numero = prompt("Introduce un numero: ");
 console.log(cuentaAtras(numero));
 
+let numero1 = prompt("Introduce un numero: ");
+let numero2 = prompt("Introduce un numero: ");
+
+function division (numero1, numero2) {
+
+  if ((numero1 % numero2) == 0) {
+    return ((numero1 / numero2), 0);
+  } else {
+    numero1 = prompt("Introduce un numero: ");
+    numero2 = prompt("Introduce un numero: ");
+    division(numero1, numero2);
+  }
+}
+
 console.log(devolver());
 console.log(multiplicar(4));
 console.log(multiplicar(2, 3));
@@ -45,3 +59,4 @@ console.log (p1.coordX);
 console.log (Punto.distancia(p1, p2));
 const overThirty = persons.filter(person => person.age > 30);
 console.log(overThirty);
+console.log(division(numero1, numero2));
