@@ -1,6 +1,4 @@
-body {
-  margin: 0 auto;
-}
+body {margin: 0 auto;}
 
 #contenedor {
   padding-left: 0.5em;
@@ -9,6 +7,4 @@ body {
   height: 1000px;
 }
 
-#texto {
-  text-align: center;
-}
+#texto {text-align: center;}
