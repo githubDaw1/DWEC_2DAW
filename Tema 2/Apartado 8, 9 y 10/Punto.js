@@ -7,17 +7,12 @@ class Punto {
 
   static distancia(a , b) {
 
-    const dx = a.pX - b.pX;
-    const dy = a.pY - b.pY;
+    const resultado1 = Math.pow((a.pX - b.pX), 2);
+    const resultado2 = Math.pow((a.pY - b.pY), 2);
 
-    return Math.sqrt((dx * dx) + (dy * dy));
+    return Math.sqrt(resultado1 + resultado2);
   }
 
-  get coordX() {
-    return this.pX;
-  }
-
-  devuelveXporY() {
-    return (this.pX * this.pY);
-  }
+  get coordX() {return this.pX;}
+  devuelveXporY() {return (this.pX * this.pY);}
 }
