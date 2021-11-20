@@ -1,11 +1,5 @@
 function init() {
-
-  /* let pulsador = document.getElementById('pulsador');
-  pulsador.onclick = function (e) {cambiarTexto();} */
-
-  document.getElementById("pulsador").addEventListener("click",
-    function () {cambiarTexto();}
-  );
+  document.getElementById("pulsador").onclick = function (e) {cambiarTexto();}
 }
 
 function cambiarTexto() {
