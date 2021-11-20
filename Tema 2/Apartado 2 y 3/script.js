@@ -1,36 +1,35 @@
-function mensajes() {
+document.getElementById("mensajes").onclick = function mensajes() {
   console.log("Esto es un texto en la consola");
   alert("Esto es un texto en la ventana");
-  window.prompt("Introduzca algo de texto: ");
+  prompt("Introduzca algo de texto: ");
   confirm("Quieres continuar: ");
 }
 
-function variables() {
+document.getElementById("variables").onclick = function variables() {
 
-  ejemplo = 3; // Equivale a declararla fuera de la funcion como var
+  ejemplo = 3; // Equivale a declararla como var
 
   if (ejemplo === 3) {
     var variable1 = 1;
-    let variable2 = 2;
+    // let variable2 = 2;
   }
 
-  console.log(variable1); // variable1 existe en este lugar
-  console.log(variable2); // variable2 no existe en este lugar
+  console.log(variable1);
+  // console.log(variable2);
 }
 
-function tipos() {
+document.getElementById("tipos").onclick = function tipos() {
 
   let edad = 23;
-  let nueva_edad;
   let incremento = 4;
   const nombre = "Rosa García";
 
   console.log(typeof incremento === "number");
-  nueva_edad = edad + incremento;
-  console.log(nombre + " tras " + incremento + " años tendrá " + nueva_edad);
+  console.log(nombre + " dentro de " + incremento + " años tendrá " +
+  (edad + incremento));
 }
 
-function coercion() {
+document.getElementById("coercion").onclick = function coercion() {
 
   let numero = 5;
   let a = "2";
@@ -47,121 +46,100 @@ function coercion() {
   console.log(x < z); // Muestra true
 }
 
-function operadorTernario() {
+document.getElementById("ternario").onclick = function operadorTernario() {
 
-  let altura; // variable no definida
-  console.log(altura ? true : false); //Al no estar definido, muestra false.
+  let altura;
+  console.log(altura ? true : false); // muestra false.
 
   /*
-  if (altura) { //Al no estar definido, muestra: false. Uso del operador "if"
+  if (altura) { // Al no estar definido, muestra: false.
     console.log("true");
   } else {
     console.log("false");
-  }
-  */
+  } */
 }
 
-function arrays() {
+document.getElementById("uni").onclick = function uni() {
 
-  let miVector = [];
-  miVector[0] = 22;
-  miVector[1] = 12;
-  miVector[2] = 33;
-  var activities = [];
   let arr = ["1", "10", "100", "1000"];
-  activities = [
-    ["Work", 9],
-    ["Eat", 1],
-    ["Commute", 2],
-    ["Play Game", 1],
-    ["Sleep", 7]
-  ];
 
-  for (let i = 0; i < arr.length && arr[i] < 500; i++) {
+  for (let i = 0; i < arr.length && (arr[i] < 500); i++) {
     console.log(i);
   }
+}
+
+document.getElementById("bidi").onclick = function bidi() {
+
+  var activities = [["Work", 9], ["Eat", 1], ["Commute", 2],
+                    ["Play Game", 1], ["Sleep", 7]];
+  var innerArrayLength = activities[0].length;
 
   for (let i = 0; i < activities.length; i++) {
-
-    var innerArrayLength = activities[i].length;
-
     for (let j = 0; j < innerArrayLength; j++) {
-      console.log('[' + i + ',' + j + '] = ' + activities[i][j]);
+      console.log("[ " + i + ", " + j + " ] = " + activities[i][j]);
     }
   }
 }
 
-function clonacion() {
+document.getElementById("clonacion").onclick = function clonacion() {
 
-  let miArrayUnidimensional = {miVector}; // Se conoce como Spread
-  console.table(miArrayUnidimensional);
-
-  console.log("HACIENDO USO DE 'Object.assign'. OTRA FORMA DE CLONAR");
+  let miArrayUnidimensional = {miVector};
   let miOtroUnidimensional = Object.assign({}, miVector);
-  console.table(miOtroUnidimensional);
-
-  console.log("ARRAY CON EL QUE VAMOS A TRABAJAR");
-  console.log(activities);
-  console.log("HACIENDO USO DE 'JSON'. LA FORMA PREFERIDA");
   let miArrayBidimensional = JSON.parse(JSON.stringify(activities));
+
+  console.table(miArrayUnidimensional);
+  console.log("HACIENDO USO DE Object.assign: ");
+  console.table(miOtroUnidimensional);
+  console.log("ARRAY CON EL QUE VAMOS A TRABAJAR: " + activities);
+  console.log("HACIENDO USO DE 'JSON'. LA FORMA PREFERIDA");
   console.table(miArrayBidimensional);
 }
 
-function tres7() {
+document.getElementById("conversion").onclick = function conversion() {
 
-  let num = "100"; //Es una cadena
-  let num2 = "100.13"; //Es una cadena
-  let num3 = 11; // Es un entero
-  let n = parseInt(num); // Almacena un entero. Si hubiera habido parte decimal la truncará
-  let n2 = parseFloat(num2); // Almacena un decimal
-  let n3 = num3.toString(); // Almacena una cadena
+  let num = "100";
+  let num2 = "100.13";
+  let num3 = 11;
+  let n = parseInt(num);
+  let n2 = parseFloat(num2);
+  let n3 = num3.toString();
 
   console.log("Práctica 3.7");
-  console.log(num);
-  console.log(n);
-  console.log(num2);
-  console.log(n2);
-  console.log(num3);
-  console.log(n3);
+  console.log(num + ", " + n + ", " + num2 + ", " + n2 + ", " + num3 + ", " + n3);
 }
 
-function tres8() {
+document.getElementById("constante").onclick = function constante() {
+
+  const PI = 3.1416;
+  const miArray = [1, 2, 3];
 
   console.log("Práctica 3.8");
-  const PI = 3.1416;
   console.log(PI);
-  console.log("LA VARIABLE NO SE PUEDE ASIGNAR PORQUE HA SIDO DEFINIDA COMO CONSTANTE");
-  PI = 3; // Esto falla
+  console.log(miArray[0]);
 
-  const miArray = [1, 2, 3];
-  console.log(miArray[0]); // Muestra el valor 1
-  console.log("LOS ELEMENTOS DEL ARRAY SI SE PUEDEN ASIGNAR");
   miArray[0] = 4;
-  console.log(miArray[0]); // Muestra el valor 4
-  console.log("EL ARRAY NO SE PUEDE ASIGNAR PORQUE HA SIDO DEFINIDO COMO CONSTANTE");
-  miArray = []; // Esto falla porque 'miArray' ha sido definida como constante
+  console.log(miArray[0]);
 }
 
-function tres9() {
+document.getElementById("estricto").onclick = function estricto() {
 
   console.log("Práctica 3.9");
+
   /*
   "use strict";
-  pi = 3.14; // Da error
+  pi = 3.14;
+
   funcionPrueba();
 
-  function funcionPrueba() {
-      piBIS = 3.14; // Da error
-  }
-  */
+  function funcionPrueba() {piBIS = 3.14;} */
 
-  pi = 3.14; // No da error
+  pi = 3.14;
   funcionPrueba();
 
   function funcionPrueba() {
     console.log(pi);
     "use strict";
-    let piNew = 3.141592; // No da error
+    let piNew = 3.141592;
     console.log(piNew);
   }
 }
