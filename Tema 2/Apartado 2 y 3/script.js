@@ -3,7 +3,7 @@ document.getElementById("mensajes").onclick = function mensajes() {
   alert("Esto es un texto en la ventana");
   prompt("Introduzca algo de texto: ");
   confirm("Quieres continuar: ");
-}
+};
 
 document.getElementById("variables").onclick = function variables() {
 
@@ -16,7 +16,7 @@ document.getElementById("variables").onclick = function variables() {
 
   console.log(variable1);
   // console.log(variable2);
-}
+};
 
 document.getElementById("tipos").onclick = function tipos() {
 
@@ -27,7 +27,7 @@ document.getElementById("tipos").onclick = function tipos() {
   console.log(typeof incremento === "number");
   console.log(nombre + " dentro de " + incremento + " años tendrá " +
   (edad + incremento));
-}
+};
 
 document.getElementById("coercion").onclick = function coercion() {
 
@@ -44,7 +44,7 @@ document.getElementById("coercion").onclick = function coercion() {
   console.log(a + b); // Muestra 25
   console.log(x < y); // Muestra false
   console.log(x < z); // Muestra true
-}
+};
 
 document.getElementById("ternario").onclick = function operadorTernario() {
 
@@ -57,7 +57,7 @@ document.getElementById("ternario").onclick = function operadorTernario() {
   } else {
     console.log("false");
   } */
-}
+};
 
 document.getElementById("uni").onclick = function uni() {
 
@@ -66,7 +66,7 @@ document.getElementById("uni").onclick = function uni() {
   for (let i = 0; i < arr.length && (arr[i] < 500); i++) {
     console.log(i);
   }
-}
+};
 
 document.getElementById("bidi").onclick = function bidi() {
 
@@ -79,7 +79,7 @@ document.getElementById("bidi").onclick = function bidi() {
       console.log("[ " + i + ", " + j + " ] = " + activities[i][j]);
     }
   }
-}
+};
 
 document.getElementById("clonacion").onclick = function clonacion() {
 
@@ -93,7 +93,7 @@ document.getElementById("clonacion").onclick = function clonacion() {
   console.log("ARRAY CON EL QUE VAMOS A TRABAJAR: " + activities);
   console.log("HACIENDO USO DE 'JSON'. LA FORMA PREFERIDA");
   console.table(miArrayBidimensional);
-}
+};
 
 document.getElementById("conversion").onclick = function conversion() {
 
@@ -106,7 +106,7 @@ document.getElementById("conversion").onclick = function conversion() {
 
   console.log("Práctica 3.7");
   console.log(num + ", " + n + ", " + num2 + ", " + n2 + ", " + num3 + ", " + n3);
-}
+};
 
 document.getElementById("constante").onclick = function constante() {
 
@@ -119,7 +119,7 @@ document.getElementById("constante").onclick = function constante() {
 
   miArray[0] = 4;
   console.log(miArray[0]);
-}
+};
 
 document.getElementById("estricto").onclick = function estricto() {
 
@@ -137,9 +137,12 @@ document.getElementById("estricto").onclick = function estricto() {
   funcionPrueba();
 
   function funcionPrueba() {
+
     console.log(pi);
+
     "use strict";
+
     let piNew = 3.141592;
     console.log(piNew);
   }
-}
+};
